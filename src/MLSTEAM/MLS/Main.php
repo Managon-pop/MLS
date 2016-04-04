@@ -22,15 +22,16 @@ use pocketmine\event\player\PlayerPreLoginEvent;
 ##Main
 class Main extends Pluginbase implements Listener
 {
-	const version = "1.0";
+	const VERSION = "1.0";
 	
-	const plugin = "MCPELoginSystem";
+	const PLUGIN = "MCPELoginSystem";
+	const URL = "";//ホームページなどを作ったら入れます。Managon.
 	
 	public function onEnable()
 	{
 		$address = "適当.xyz";
-		$this->getLogger()->info("§2".self::plugin."の読み込みが完了しました");
-		$this->getLogger()->info("§c".self::plugin."の再配布・二次配布は禁止です");
+		$this->getLogger()->info("§2".self::PLUGIN."の読み込みが完了しました");
+		$this->getLogger()->info("§c".self::PLUGIN."の再配布・二次配布は禁止です");
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->comment["kick"] = array(
 			0 => "あなたの端末情報が変わったようです,".$address."で情報を更新してください",
@@ -48,4 +49,5 @@ class Main extends Pluginbase implements Listener
 		//ここらへんのDBは、他の人に任せます ogiwara
 		
 	} 
+	
 }

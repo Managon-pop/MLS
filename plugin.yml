@@ -2,4 +2,5 @@ name: MCPELoginSystem
 main: MLSTEAM\MLS\Main
 api: [1.14.0,2.0.0]
 version: "1.0"
+author: MCPELoginSystemTeam
 authors: [ogiwara,famima,Sunshine,yukkuri,Managon]

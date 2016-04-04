@@ -2,6 +2,7 @@
 とりあえず頑張る。
 ####  [特徴](##tokutyo)
 ####  [やることリスト](##list)
+####  [ライセンス](##license)
 ## <a name"tokutyo"></a>特徴
 ・ログインが簡単
 ## <a name"list"></a>やることリスト（PDSコピペ）
@@ -13,7 +14,7 @@
 
 ほい。頑張ろう
 
-##LICENCE
+## <a name"licence"></a>LICENSE
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or

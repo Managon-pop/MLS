@@ -3,7 +3,7 @@
 namespace MLSTEAM\MLS;
 
 ##Base
-use pocketmine\pluginbase;
+use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 
 ##Player

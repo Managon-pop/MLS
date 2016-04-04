@@ -47,7 +47,26 @@ class Main extends Pluginbase implements Listener
 		$cid = $player->loginData["clientId"];
 		$ip = $player->getAddress();
 		//ここらへんのDBは、他の人に任せます ogiwara
-		
-	} 
-	
+		if(isset($this->LC[$name])){
+			$loginData = $this->LC[$name];
+			if(!($cid == $loginData[0] && $ip == $loginData[1])){
+				$this->LM[$name] = "データベースに接続してログイン";
+				//キャッシュのデータと合わなかったときの処理(データベースに接続)
+			}else{
+				$this->LM[$name] = "キャッシュによりログイン";
+			}
+		}else{
+			$this->LM[$name] = "無理やりログイン";//本来ならここでデータベースに接続します
+		}
+	}
+	public function onJoin(PlayerJoinEvent $event)
+	{
+		$player = $event->getPlayer();
+		$name = $player->getName();
+		$cid = $player->loginData["clientId"];
+		$ip = $player->getAddress();
+		$loginData = array($cid, $ip);//ここで
+		$this->LC[$name] = $loginData;//キャッシュを作成
+		$player->sendMessage($this->LM[$name]);
+	}
 }

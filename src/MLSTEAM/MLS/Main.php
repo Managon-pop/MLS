@@ -14,6 +14,7 @@ use pocketmine\Server;
 
 ##event
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerPreLoginEvent;
 
 ##utils
 use pocketmine\utils\TextFormat;
@@ -38,12 +39,13 @@ class Main extends Pluginbase implements Listener
 			3 => "このサーバーはただいま整備中です"
 		);
 	}
-	public function onJoin(PlayerJoinEvent $event)
+	public function onLogin(PlayerPreLoginEvent $event)
 	{
 		$player = $event->getPlayer();
 		$name = $player->getName();
 		$cid = $player->loginData["clientId"];
 		$ip = $player->getAddress();
+		//ここらへんのDBは、他の人に任せます ogiwara
 		
 	} 
 }

@@ -17,7 +17,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerPreLoginEvent;
 
 ##utils
-//use pocketmine\utils\TextFormat;//§を使えば要らないんじゃない？
+use pocketmine\utils\TextFormat;//入れといて損はない(*´・ω・)
 
 ##Main
 class Main extends Pluginbase implements Listener

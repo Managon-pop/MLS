@@ -17,7 +17,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerPreLoginEvent;
 
 ##utils
-use pocketmine\utils\TextFormat;
+//use pocketmine\utils\TextFormat;//§を使えば要らないんじゃない？
 
 ##Main
 class Main extends Pluginbase implements Listener
@@ -29,8 +29,8 @@ class Main extends Pluginbase implements Listener
 	public function onEnable()
 	{
 		$address = "適当.xyz";
-		$this->getLogger()->info(TextFormat::GREEN.self::plugin."の読み込みが完了しました");
-		$this->getLogger()->info(TextFormat::RED.self::plugin."の再配布・二次配布は禁止です");
+		$this->getLogger()->info("§2".self::plugin."の読み込みが完了しました");
+		$this->getLogger()->info("§c".self::plugin."の再配布・二次配布は禁止です");
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->comment["kick"] = array(
 			0 => "あなたの端末情報が変わったようです,".$address."で情報を更新してください",

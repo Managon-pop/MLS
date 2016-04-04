@@ -29,8 +29,8 @@ class Main extends Pluginbase implements Listener
 		$this->getLogger()->info(TextFormat::RED.$plugin."の再配布・二次配布は禁止です");
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->comment["kick"] = array(
-			0 => "あなたの端末情報が変わったようです,"$address."で情報を更新してください",
-			1 => "あなたのipアドレスが変わったようです,"$address."で情報を更新してください",
+			0 => "あなたの端末情報が変わったようです,".$address."で情報を更新してください",
+			1 => "あなたのipアドレスが変わったようです,".$address."で情報を更新してください",
 			2 => "同じ名前のプレイヤーがいます",
 			3 => "このサーバーはただいま整備中です"
 		);

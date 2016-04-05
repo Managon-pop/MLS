@@ -59,6 +59,28 @@ class Main extends Pluginbase implements Listener
 			$this->LM[$name] = "無理やりログイン";//本来ならここでデータベースに接続します
 		}
 	}
+	
+	/*
+	           public function onJoin(PlayerJoinEvent $event){
+           	    	$player = $event->getPlayer();
+    				      $name = $player->getName();
+    				      $time = date("m月j日: H時i分s秒");
+                  date_default_timezone_set('Asia/Tokyo');
+                  $task = new time($this, $player);//インスタンス作成
+                  $this->getServer()->getScheduler()->scheduleRepeatingTask($task, 20);
+
+                    if(date("H") >= 5 and date("H") <= 11){
+                      $player->sendMessage(TextFormat::YELLOW."[ 時報: ".$time."]§bおはようございます!!\n§b今日もこのサーバーを宜しくお願いします♪");
+                    }elseif(date("H") >= 12 and date("H") <= 17){
+                      $player->sendMessage(TextFormat::YELLOW."[ 時報: ".$time."]§bこんにちは〜\n§bゆっくりしていってくださいね!!");
+    				        }elseif(date("H") >= 18 and date("H") <= 24){
+    					         $player->sendMessage(TextFormat::YELLOW."[ 時報: ".$time."]§bこんばんは〜\n§b今日も１日お疲れなのです!!");
+    				        }elseif(date("H") >= 1 and date("H") <= 4){
+    					         $player->sendMessage(TextFormat::YELLOW."[ 時報: ".$time."]§bこんな夜遅くまでゲームをしていたら体調を崩しますよ!?\n§bほどほどにしておいてくださいね♪");
+                     }
+                   }
+                 }
+                 */
 	public function onJoin(PlayerJoinEvent $event)
 	{
 		$player = $event->getPlayer();

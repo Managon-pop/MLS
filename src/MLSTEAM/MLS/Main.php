@@ -104,7 +104,7 @@ class Main extends Pluginbase implements Listener
                 	$this->connected = true;
                 }else{
                 	$this->getLogger()->warning("§cネットワーク関係でエラーが発生しています。\n
-                	                                お手数をおかけしますがMLSチームまで報告してください。");
+                	                               お手数をおかけしますがMLSチームまで報告してください。");
                 }
 	}
 }

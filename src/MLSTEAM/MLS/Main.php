@@ -27,6 +27,8 @@ class Main extends Pluginbase implements Listener
 	const PLUGIN = "MCPELoginSystem";
 	const URL = "";//ホームページなどを作ったら入れます。Managon.
 	
+	private $connected = false;
+	
 	public function onEnable()
 	{
 		$address = "適当.xyz";
@@ -39,6 +41,7 @@ class Main extends Pluginbase implements Listener
 			2 => "同じ名前のプレイヤーがいます",
 			3 => "このサーバーはただいま整備中です"
 		);
+		$this->connect();
 	}
 	public function onLogin(PlayerPreLoginEvent $event)
 	{
@@ -90,5 +93,18 @@ class Main extends Pluginbase implements Listener
 		$loginData = array($cid, $ip);//ここで
 		$this->LC[$name] = $loginData;//キャッシュを作成
 		$player->sendMessage($this->LM[$name]);
+	}
+	
+	public function connect(){
+		$url = "http://mgn.pe.hu/yeah/connect.php?type=connect";//ここはテスト用で作ったURL
+                $init = curl_init($url);
+                curl_setopt($init, CURLOPT_RETURNTRANSFER, true);
+                $result = curl_exec($init);
+                if($result === "5"){
+                	$this->connected = true;
+                }else{
+                	$this->getLogger()->warning("§cネットワーク関係でエラーが発生しています。\n
+                	                                お手数をおかけしますがMLSチームまで報告してください。");
+                }
 	}
 }
